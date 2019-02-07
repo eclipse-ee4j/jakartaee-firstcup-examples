@@ -17,21 +17,21 @@
         <artifactId>project</artifactId>
         <version>1.0.5</version>
     </parent>
-    <groupId>org.glassfish.docs</groupId>
-    <artifactId>firstcup-examples</artifactId>
+    <groupId>jakarta.firstcup</groupId>
+    <artifactId>examples</artifactId>
     <version>8.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>firstcup</name>
+    <name>First Cup of Jakarta EE Tutorial Examples</name>
 
     <scm>
-        <connection>scm:git:git@github.com:eclipse-ee4j/glassfish-firstcup-examples.git</connection>
-        <developerConnection>scm:git:git@github.com:eclipse-ee4j/glassfish-firstcup-examples.git</developerConnection>
-        <url>https://github.com/eclipse-ee4j/glassfish-firstcup-examples</url>
+        <connection>scm:git:git@github.com:eclipse-ee4j/jakartaee-firstcup-examples.git</connection>
+        <developerConnection>scm:git:git@github.com:eclipse-ee4j/jakartaee-firstcup-examples.git</developerConnection>
+        <url>https://github.com/eclipse-ee4j/jakartaee-firstcup-examples</url>
       <tag>HEAD</tag>
   </scm>
     <issueManagement>
         <system>IssueTracker</system>
-        <url>https://github.com/eclipse-ee4j/glassfish-firstcup-examples/issues</url>
+        <url>https://github.com/eclipse-ee4j/jakartaee-firstcup-examples/issues</url>
     </issueManagement>
 
     <modules>
