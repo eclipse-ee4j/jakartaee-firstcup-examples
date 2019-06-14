@@ -27,8 +27,8 @@
         <connection>scm:git:git@github.com:eclipse-ee4j/jakartaee-firstcup-examples.git</connection>
         <developerConnection>scm:git:git@github.com:eclipse-ee4j/jakartaee-firstcup-examples.git</developerConnection>
         <url>https://github.com/eclipse-ee4j/jakartaee-firstcup-examples</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
     <issueManagement>
         <system>IssueTracker</system>
         <url>https://github.com/eclipse-ee4j/jakartaee-firstcup-examples/issues</url>
@@ -114,5 +114,4 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
 </project>
