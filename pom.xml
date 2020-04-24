@@ -41,7 +41,7 @@
     </modules>
 
     <properties>
-        <javaee.api.version>8.0</javaee.api.version>
+        <jakartaee.api.version>8.0.0</jakartaee.api.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
         <maven.war.plugin.version>2.3</maven.war.plugin.version>
@@ -108,9 +108,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>${javaee.api.version}</version>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee.api.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
