@@ -3,7 +3,7 @@
 
 - Maven
 - JDK8+
-- GlassFish 5
+- GlassFish 6
 
 ## Build the examples
 

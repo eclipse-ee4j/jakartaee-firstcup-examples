@@ -1,6 +1,6 @@
 <!--
 
-    Copyright (c) 2018 Oracle and/or its affiliates. All rights reserved.
+    Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
 
     This program and the accompanying materials are made available under the
     terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -19,7 +19,7 @@
     </parent>
     <groupId>jakarta.firstcup</groupId>
     <artifactId>examples</artifactId>
-    <version>8.1-SNAPSHOT</version>
+    <version>9.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>First Cup of Jakarta EE Tutorial Examples</name>
 
@@ -41,7 +41,7 @@
     </modules>
 
     <properties>
-        <javaee.api.version>8.0</javaee.api.version>
+        <jakartaee.api.version>9.0.0</jakartaee.api.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
         <maven.war.plugin.version>2.3</maven.war.plugin.version>
@@ -108,9 +108,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>${javaee.api.version}</version>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee.api.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
