@@ -13,7 +13,6 @@ package firstcup.web;
 import firstcup.ejb.DukesBirthdayBean;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import jakarta.ejb.EJB;
