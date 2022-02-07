@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2018 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2021 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -10,11 +10,10 @@
 
 package firstcup.dukesage.resource;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import java.time.LocalDate;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
 
 /**
  * REST Web Service
@@ -35,16 +34,16 @@ public class DukesAgeResource {
     @Produces("text/plain")
     public String getText() {
         // Create a new Calendar for Duke's birthday
-        Calendar dukesBirthday = new GregorianCalendar(1995, Calendar.MAY, 23);
+        LocalDate dukesBirthday = LocalDate.of(1995, 5, 23);
         // Create a new Calendar for today
-        Calendar now = GregorianCalendar.getInstance();
+        LocalDate now = LocalDate.now();
 
         // Subtract today's year from Duke's birth year, 1995
-        int dukesAge = now.get(Calendar.YEAR) - dukesBirthday.get(Calendar.YEAR);
-        dukesBirthday.add(Calendar.YEAR, dukesAge);
+        int dukesAge = now.getYear() - dukesBirthday.getYear();
+        LocalDate thisBirthday = dukesBirthday.plusYears(dukesAge);
 
         // If today's date is before May 23, subtract a year from Duke's age
-        if (now.before(dukesBirthday)) {
+        if (now.isBefore(thisBirthday)) {
             dukesAge--;
         }
         // Return a String representation of Duke's age

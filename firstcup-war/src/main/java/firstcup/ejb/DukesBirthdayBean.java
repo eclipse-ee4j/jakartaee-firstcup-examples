@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2018 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2021 Oracle and/or its affiliates. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Distribution License v. 1.0, which is available at
@@ -11,14 +11,13 @@
 package firstcup.ejb;
 
 import firstcup.entity.FirstcupUser;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+
+import java.time.LocalDate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import jakarta.ejb.Stateless;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 
 /**
  * DukesBirthdayBean is a stateless session bean that calculates the age
@@ -40,29 +39,25 @@ public class DukesBirthdayBean {
 
     }
 
-    public int getAgeDifference(Date date) {
+    public int getAgeDifference(LocalDate date) {
         int ageDifference;
 
-        Calendar theirBirthday = new GregorianCalendar();
-        Calendar dukesBirthday = new GregorianCalendar(1995, Calendar.MAY, 23);
-
-        // Set the Calendar object to the passed-in Date
-        theirBirthday.setTime(date);
+        LocalDate theirBirthday = date;
+        LocalDate dukesBirthday = LocalDate.of(1995, 5, 23);
 
         // Subtract the user's age from Duke's age
-        ageDifference = dukesBirthday.get(Calendar.YEAR)
-                - theirBirthday.get(Calendar.YEAR);
+        ageDifference = dukesBirthday.getYear() - theirBirthday.getYear();
         logger.log(Level.INFO, "Raw ageDifference is: {0}", ageDifference);
 
         // Check to see if Duke's birthday occurs before the user's. If so,
         // subtract one from the age difference
-        if (dukesBirthday.before(theirBirthday) && (ageDifference > 0)) {
+        if (dukesBirthday.isBefore(theirBirthday) && (ageDifference > 0)) {
             ageDifference--;
         }
 
         // Check to see if Duke's birthday occurs after the user's when the user 
         // is younger. If so, subtract one from the age difference
-        if (dukesBirthday.after(theirBirthday) && (ageDifference < 0)) {
+        if (dukesBirthday.isAfter(theirBirthday) && (ageDifference < 0)) {
             ageDifference++;
         }
 
