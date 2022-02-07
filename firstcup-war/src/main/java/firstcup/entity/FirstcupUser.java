@@ -11,15 +11,12 @@
 package firstcup.entity;
 
 import java.io.Serializable;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.time.LocalDate;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.NamedQuery;
-import jakarta.persistence.Temporal;
 
 @Entity
 @NamedQuery(name = "findAverageAgeDifferenceOfAllFirstcupUsers",
@@ -30,18 +27,16 @@ public class FirstcupUser implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Temporal(jakarta.persistence.TemporalType.DATE)
-    protected Calendar birthday;
+
+    protected LocalDate birthday;
     protected int ageDifference;
 
     public FirstcupUser() {
     }
 
-    public FirstcupUser(Date date, int difference) {
-        Calendar cal = new GregorianCalendar();
-        cal.setTime(date);
-        birthday = cal;
-        ageDifference = difference;
+    public FirstcupUser(LocalDate date, int difference) {
+        this.birthday=date;
+        this.ageDifference = difference;
     }
 
     /**
@@ -67,7 +62,7 @@ public class FirstcupUser implements Serializable {
      *
      * @return the value of birthday
      */
-    public Calendar getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
@@ -76,7 +71,7 @@ public class FirstcupUser implements Serializable {
      *
      * @param birthday new value of birthday
      */
-    public void setBirthday(Calendar birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
