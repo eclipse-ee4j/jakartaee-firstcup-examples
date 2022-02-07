@@ -12,6 +12,7 @@ package firstcup.web;
 
 import firstcup.ejb.DukesBirthdayBean;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,7 +33,7 @@ public class DukesBDay implements Serializable {
     private DukesBirthdayBean dukesBirthdayBean;
     protected int age;
     @NotNull
-    protected Date yourBD;
+    protected LocalDate yourBD;
     protected int ageDiff;
     protected int absAgeDiff;
     protected Double averageAgeDifference;
@@ -84,7 +85,7 @@ public class DukesBDay implements Serializable {
      *
      * @return the value of yourBD
      */
-    public Date getYourBD() {
+    public LocalDate getYourBD() {
         return yourBD;
     }
 
@@ -93,7 +94,7 @@ public class DukesBDay implements Serializable {
      *
      * @param yourBD new value of yourBD
      */
-    public void setYourBD(Date yourBD) {
+    public void setYourBD(LocalDate yourBD) {
         this.yourBD = yourBD;
     }
 
