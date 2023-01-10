@@ -11,3 +11,8 @@
 *.classpath
 .idea
 */target
+.vscode
+target
+
+nb-*
+

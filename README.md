@@ -1,9 +1,10 @@
-# First Cup of Java EE examples
-## Pre requisites
+# First Cup of Jakarta  EE 10 Examples
 
-- Maven
-- JDK8+
-- GlassFish 6
+## Prerequisites
+
+- Apache Maven 3.8+
+- JDK 11+
+- GlassFish 7.0.0
 
 ## Build the examples
 

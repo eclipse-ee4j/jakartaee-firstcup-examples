@@ -16,7 +16,7 @@
     <parent>
         <groupId>jakarta.firstcup</groupId>
         <artifactId>examples</artifactId>
-        <version>9.0-SNAPSHOT</version>
+        <version>10.0.0</version>
     </parent>
 
     <artifactId>archetypes</artifactId>
