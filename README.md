@@ -1,4 +1,6 @@
-# First Cup of Jakarta  EE 10 Examples
+# First Cup of Jakarta Examples
+
+This version targets Jakarta EE 10.
 
 ## Prerequisites
 
